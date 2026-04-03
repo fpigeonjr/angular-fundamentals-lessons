@@ -58,7 +58,7 @@ import { UserinfoComponent } from "./userinfo/userinfo.component";
       flex-wrap: wrap;
     }
   `,
-  imports: [UserInfoComponent, UserinfoComponent],
+  imports: [UserinfoComponent],
 })
 export class AppComponent {
   title = "03-component-composition";
