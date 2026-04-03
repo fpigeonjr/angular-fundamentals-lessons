@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   standalone: true,
   template: `
     <article class="offer">
       <h1>
         <span>Bonus Offer</span>
-        <span>&dollar;<!-- ITEM PRICE --></span>
+        <span>&dollar;{{ item.price }}</span>
       </h1>
       <img src="/assets/noun-product-6277512.png" width="400" />
-      <p><!-- ITEM NAME--></p>
-      <p><!-- ITEM DESCRIPTION --></p>
+      <p>{{ item.name }}</p>
+      <p>{{ item.description }}</p>
       <button>Order Now</button>
     </article>
   `,
@@ -40,9 +40,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   item = {
-    name: 'Treasure Trove Trunk',
+    name: "Treasure Trove Trunk",
     price: 30,
-    description:
-      'Unveil a treasure trove of surprises in this delightful mystery box.',
+    description: "Unveil a treasure trove of surprises in this delightful mystery box.",
   };
 }
