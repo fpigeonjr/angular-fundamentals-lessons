@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { UserinfoComponent } from "./userinfo/userinfo.component";
-import { UserInfoComponent } from "../../../11-dependency-injection/src/app/user-info/user-info.component";
 
 @Component({
   selector: "app-root",
@@ -11,7 +10,7 @@ import { UserInfoComponent } from "../../../11-dependency-injection/src/app/user
       <h1>Metrics and Figures Dashboard</h1>
       <section class="content">
         <article class="tile">
-          <app-user-info />
+          <app-userinfo />
         </article>
         <article class="tile">
           <img src="/assets/noun-pie-chart-6331100-C462DD.png" height="300" />
@@ -59,7 +58,7 @@ import { UserInfoComponent } from "../../../11-dependency-injection/src/app/user
       flex-wrap: wrap;
     }
   `,
-  imports: [UserInfoComponent],
+  imports: [UserInfoComponent, UserinfoComponent],
 })
 export class AppComponent {
   title = "03-component-composition";
