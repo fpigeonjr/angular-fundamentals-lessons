@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { UserinfoComponent } from "./userinfo/userinfo.component";
+import { UserInfoComponent } from "../../../11-dependency-injection/src/app/user-info/user-info.component";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   standalone: true,
   template: `
     <section class="menu">🏠 Home</section>
     <section class="main">
       <h1>Metrics and Figures Dashboard</h1>
       <section class="content">
-        <article class="tile"></article>
+        <article class="tile">
+          <app-user-info />
+        </article>
         <article class="tile">
           <img src="/assets/noun-pie-chart-6331100-C462DD.png" height="300" />
         </article>
@@ -25,7 +29,7 @@ import { Component } from '@angular/core';
     .menu {
       width: 100px;
       height: 90vh;
-      background: rgb(29 36 49);;
+      background: rgb(29 36 49);
       padding: 10px;
       border-radius: 5px;
       color: white;
@@ -55,7 +59,9 @@ import { Component } from '@angular/core';
       flex-wrap: wrap;
     }
   `,
+  imports: [UserInfoComponent],
 })
 export class AppComponent {
-  title = '03-component-composition';
+  title = "03-component-composition";
+  imports = [UserinfoComponent];
 }
